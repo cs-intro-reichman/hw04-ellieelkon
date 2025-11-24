@@ -25,7 +25,6 @@ public class MyString {
 
     /** If str1 contains str2, returns true; otherwise returns false. */
     public static boolean contains(String str1, String str2) {
-        int count = 0;
 
         if (str1.length() < str2.length())
         {
@@ -34,6 +33,7 @@ public class MyString {
 
         for (int i = 0; i <= str1.length() - str2.length(); i++)
         {
+            int count = 0;
             String PartStr1 = str1.substring(i, str2.length() + i);
             for (int j = 0; j < str2.length(); j++)
             {
@@ -46,13 +46,11 @@ public class MyString {
                     count++;
                 }
             }
-        }
-
-        if (count == str2.length())
-        {
+            if (count == str2.length())
+            {
             return true;
+            }
         }
-
-            return false;
+        return false;
     }
 }
